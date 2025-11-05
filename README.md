@@ -35,14 +35,7 @@ or just clone this repo
 git clone https://github.com/misuminitt/kali-macos-plasma6.git
 ```
 
-Once you’ve cloned the repo, if you’re too lazy to go through all the steps manually, just run this script instead :
-```bash
-chmod +x auto_runner_kde_macos.sh
-bash ./auto_runner_kde_macos.sh
-```
-
-
-Then place them inside your `~/Downloads/` folder:
+However, if you still prefer to do it manually, you can place the files in the /Downloads folder :
 
 ```
 plasma6macos-albertlauncher-config.zip
@@ -66,7 +59,16 @@ plasma6macos-zshstarship-konsole.zip
 Plasma6macosMacOS_30.zip
 ```
 
-## Plasma Theme (macOS Tahoe)
+## Automatic Installation
+
+```bash
+chmod +x auto_runner_kde_macos.sh
+bash ./auto_runner_kde_macos.sh
+```
+
+## Manual Installation
+
+### Plasma Theme (macOS Tahoe)
 
 ```bash
 cd ~/Downloads
@@ -74,7 +76,7 @@ unzip Plasma6macosMacOS_30.zip
 unzip -o plasma6macos-plasma-theme.zip -d ~/.local/share
 ```
 
-## GTK Theme (MacTahoe Light/Dark)
+### GTK Theme (MacTahoe Light/Dark)
 
 ```bash
 mkdir -p ~/.themes
@@ -86,7 +88,7 @@ ln -sf ~/.themes/MacTahoe-Light/gtk-4.0/gtk.css ~/.config/gtk-4.0/
 ln -sf ~/.themes/MacTahoe-Light/gtk-4.0/gtk-dark.css ~/.config/gtk-4.0/
 ```
 
-## Kvantum (Qt Style Engine)
+### Kvantum (Qt Style Engine)
 
 ```bash
 sudo apt install -y qt-style-kvantum qt-style-kvantum-themes
@@ -100,9 +102,9 @@ If you don’t have Kvantum Manager:
 sudo apt install -y kvantum kvantum-manager qt5-style-kvantum
 ```
 
-## Darkly (Qt6 / KF6 Style)
+### Darkly (Qt6 / KF6 Style)
 
-### Option A – Prebuilt `.deb` installer
+#### Option A – Prebuilt `.deb` installer
 
 ```bash
 cd ~/Downloads
@@ -110,7 +112,7 @@ curl -L -o darkly.deb https://github.com/Bali10050/Darkly/releases/download/v0.5
 sudo apt install ./darkly.deb
 ```
 
-### Option B – Build manually (for Plasma 6)
+#### Option B – Build manually (for Plasma 6)
 
 Install dependencies:
 
@@ -143,7 +145,7 @@ rm -rf build && cmake -S . -B build -DBUILD_QT6=ON -DBUILD_QT5=OFF -DCMAKE_BUILD
 cmake --build build -j"$(nproc)" && sudo cmake --install build
 ```
 
-## Icons, Cursors, Fonts, and Wallpapers
+### Icons, Cursors, Fonts, and Wallpapers
 
 ```bash
 # Icons
@@ -161,7 +163,7 @@ unzip -o plasma6macos-fonts.zip -d ~/.local/share
 sudo unzip -o plasma6macos-wallpapers.zip -d /usr/share/wallpapers
 ```
 
-## Widgets (Plasmoids) & KWin Effects
+### Widgets (Plasmoids) & KWin Effects
 
 ```bash
 # Widgets
@@ -179,14 +181,14 @@ sudo apt install -y plasma-widgets-addons
 kquitapp6 plasmashell && kstart plasmashell &
 ```
 
-## SDDM Login Theme
+### SDDM Login Theme
 
 ```bash
 sudo unzip -o plasma6macos-sddm.zip -d /
 ls /usr/share/sddm/themes
 ```
 
-## Plymouth Boot Screen
+### Plymouth Boot Screen
 
 ```bash
 sudo apt install -y plymouth plymouth-themes plymouth-x11
@@ -194,7 +196,7 @@ sudo unzip -o plasma6macos-plymouth-config.zip -d /usr/share/plymouth/themes/
 sudo plymouth-set-default-theme -R macos
 ```
 
-## Albert Launcher
+### Albert Launcher
 
 ```bash
 cd ~/Downloads
@@ -209,7 +211,7 @@ unzip -o plasma6macos-albertlauncher-config.zip -d ~/
 sudo unzip -o plasma6macos-albertlauncher-theme.zip -d /
 ```
 
-## Zsh + Oh-My-Zsh + Starship
+### Zsh + Oh-My-Zsh + Starship
 
 ```bash
 sudo apt install -y zsh
@@ -226,7 +228,7 @@ curl -sS https://starship.rs/install.sh | sh
 unzip -o plasma6macos-zshstarship-konsole.zip -d ~/
 ```
 
-## Apply Global KDE Config
+### Apply Global KDE Config
 
 ```bash
 kquitapp6 plasmashell
@@ -235,7 +237,7 @@ unzip -o plasma6macos-kde-config-manjaro.zip -d ~/
 kstart plasmashell &
 ```
 
-## Restart or Logout
+### Restart or Logout
 
 If `qdbus6-qt6` fails:
 
@@ -251,7 +253,7 @@ kquitapp6 plasmashell && kstart plasmashell &
 sudo reboot
 ```
 
-## Troubleshooting
+### Troubleshooting
 
 | Problem                                                   | Fix                                                                                                           |
 | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
