@@ -1,5 +1,14 @@
 # MacOS Tahoe Theme in Kali Linux
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Operating%20System-Kali%20GNU%2FLinux%202025.3-%23557C94?style=for-the-badge&logo=kalilinux&logoColor=white"/>
+  <img src="https://img.shields.io/badge/KDE%20Plasma-6.3.6-%231D99F3?style=for-the-badge&logo=kde&logoColor=white"/>
+  <img src="https://img.shields.io/badge/KDE%20Frameworks-6.13.0-%231D99F3?style=for-the-badge&logo=kde&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Qt-6.8.2-%2341CD52?style=for-the-badge&logo=qt&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Kernel-6.16.8%2Bkali--amd64%20(64--bit)-%236E6E6E?style=for-the-badge&logo=linux&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Graphics%20Platform-Wayland-%230074D1?style=for-the-badge"/>
+</p>
+
 Transform Kali Linux (KDE Plasma 6) into a macOS-style desktop — complete with themes, icons, cursors, widgets, SDDM, Plymouth boot animation, Albert launcher, and Zsh + Starship setup.
 This project compiles all tested steps to achieve a stable and beautiful macOS-like look on Kali without breaking KDE components.
 
